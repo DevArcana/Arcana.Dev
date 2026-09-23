@@ -1,5 +1,7 @@
+import { useState } from "react";
 import {
   ArrowUpRight,
+  Copy,
   AudioLines,
   Github,
   MessageCircle,
@@ -214,6 +216,15 @@ export function Tools() {
   );
 }
 export function Connect() {
+  const [copyStatus, setCopyStatus] = useState("");
+  const copyUsername = async (username: string) => {
+    try {
+      await navigator.clipboard.writeText(username);
+      setCopyStatus(username + " " + copy.usernameCopied);
+    } catch {
+      setCopyStatus(copy.usernameCopyFailed + " " + username);
+    }
+  };
   const icons = { github: Github, discord: MessageCircle, x: ArrowUpRight };
   return (
     <Section id="connect" number="05" label={copy.connectLabel}>
@@ -225,6 +236,24 @@ export function Connect() {
       <div className="connect-links">
         {links.map((link) => {
           const Icon = icons[link.icon];
+          const username = link.username;
+          if (username) {
+            return (
+              <button
+                type="button"
+                key={link.name}
+                onClick={() => void copyUsername(username)}
+                aria-label={link.name + " 사용자명 " + username + " 복사"}
+              >
+                <Icon size={23} strokeWidth={1.5} aria-hidden="true" />
+                <div>
+                  <span className="social-name">{link.name}</span>
+                  <span className="social-username">{username}</span>
+                </div>
+                <Copy className="social-arrow" size={19} aria-hidden="true" />
+              </button>
+            );
+          }
           const content = (
             <>
               <Icon size={23} strokeWidth={1.5} aria-hidden="true" />
@@ -260,6 +289,9 @@ export function Connect() {
           );
         })}
       </div>
+      <p className="copy-status" role="status">
+        {copyStatus}
+      </p>
     </Section>
   );
 }

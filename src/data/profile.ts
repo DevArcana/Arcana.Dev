@@ -51,6 +51,8 @@ export const copy = {
   connectLabel: "CONNECT",
   connectTitle: "Find me online.",
   connectNote: "코드와 게임, 그리고 그 사이의 이야기.",
+  usernameCopied: "복사했습니다. Discord 친구 추가에 붙여넣어 주세요.",
+  usernameCopyFailed: "복사하지 못했습니다. 사용자명을 직접 복사해 주세요:",
   pending: "준비 중",
   footerNote: "Built with React + TypeScript",
   backToTop: "BACK TO TOP",

@@ -5,14 +5,19 @@ export const links: SocialLink[] = [
   {
     name: "GitHub",
     icon: "github",
-    url: undefined,
+    url: "https://github.com/DevArcana",
     caption: "CODE & EXPERIMENTS",
   },
-  { name: "Discord", icon: "discord", url: undefined, caption: "LET’S TALK" },
+  {
+    name: "Discord",
+    icon: "discord",
+    username: ".arcana3",
+    caption: "LET’S TALK",
+  },
   {
     name: "X / Twitter",
     icon: "x",
-    url: undefined,
+    url: "https://x.com/Arcana0830",
     caption: "THOUGHTS & MOMENTS",
   },
 ];

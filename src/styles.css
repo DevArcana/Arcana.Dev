@@ -1192,6 +1192,7 @@ svg {
   margin-top: 55px;
 }
 .connect-links > a,
+.connect-links > button,
 .social-unavailable {
   display: flex;
   align-items: center;
@@ -1203,7 +1204,8 @@ svg {
     border-color 0.2s,
     color 0.2s;
 }
-.connect-links > a:hover {
+.connect-links > a:hover,
+.connect-links > button:hover {
   color: var(--accent);
   border-color: var(--accent);
 }
@@ -1451,6 +1453,7 @@ svg {
     gap: 17px;
   }
   .connect-links > a,
+  .connect-links > button,
   .social-unavailable {
     gap: 10px;
     flex-wrap: wrap;
@@ -1816,12 +1819,14 @@ svg {
     margin-top: 34px;
   }
   .connect-links > a,
+  .connect-links > button,
   .social-unavailable {
     padding: 21px 3px;
     gap: 20px;
     border-bottom: 0;
   }
   .connect-links > a:last-child,
+  .connect-links > button:last-child,
   .social-unavailable:last-child {
     border-bottom: 1px solid #444a52;
   }
@@ -1837,6 +1842,7 @@ svg {
     font-size: 10px;
   }
   .connect-links > a > svg:first-child,
+  .connect-links > button > svg:first-child,
   .social-unavailable > svg:first-child {
     width: 20px;
   }
@@ -1947,4 +1953,27 @@ svg {
     top: 48px;
     transform: rotate(-28deg) skew(9deg) scale(0.82);
   }
+}
+
+.connect-links > button {
+  appearance: none;
+  background: transparent;
+  text-align: left;
+  width: 100%;
+  border-left: 0;
+  border-right: 0;
+}
+.social-username {
+  display: block;
+  font-family: Consolas, monospace;
+  font-size: 13px;
+  color: var(--accent);
+  user-select: text;
+}
+.copy-status {
+  min-height: 1.8em;
+  margin-top: 16px;
+  color: var(--accent);
+  font-size: 12px;
+  line-height: 1.8;
 }

@@ -42,7 +42,9 @@ for (const width of [375, 768, 1440, 1920]) {
         ),
       ).toBeTruthy();
     }
-    await expect(page.locator(".social-unavailable")).toHaveCount(3);
+    await expect(
+      page.getByRole("button", { name: "Discord 사용자명 .arcana3 복사" }),
+    ).toBeVisible();
     await expect(page.locator('a[href="#"], a[href=""]')).toHaveCount(0);
     await page.locator("#home").scrollIntoViewIfNeeded();
     await page.screenshot({

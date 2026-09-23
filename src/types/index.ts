@@ -14,6 +14,7 @@ export interface SocialLink {
   icon: "github" | "discord" | "x";
   url?: string;
   caption: string;
+  username?: string;
 }
 export interface Interest {
   id: string;
