@@ -9,14 +9,6 @@ export const projects: Project[] = [
     visual: "city",
   },
   {
-    title: "MAIMAI HELPER",
-    slug: "maimai-helper",
-    category: "APP",
-    description: "Personal Rhythm Game Utility",
-    tech: ["Kotlin", "Android"],
-    visual: "orbit",
-  },
-  {
     title: "Game Development Projects",
     slug: "game-experiments",
     category: "GAME DEVELOPMENT",
